@@ -27,3 +27,7 @@ docker volume create redis
 ```
 docker run --detach --name redis --network redis --volume redis:/data:rw library/redis:alpine
 ```
+```
+docker run --detach --name hasher --network hasher --volume ${PWD}/hasher/hasher.rb ${github_username}/${github_repository}:${github_branch}-hasher hasher.rb
+docker run --detach --name rng --network rng --volume ${PWD}/rng/rng.py ${github_username}/${github_repository}:${github_branch}-rng rng.py
+```
