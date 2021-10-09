@@ -15,3 +15,9 @@ do
   docker build --file ${app}/Dockerfile --tag ${github_username}/${github_repository}:${github_branch}-${app} .
 done
 ```
+```
+for app in hasher redis rng
+do
+  docker network create ${app}
+done
+```
