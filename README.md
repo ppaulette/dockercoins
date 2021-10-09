@@ -21,3 +21,9 @@ do
   docker network create ${app}
 done
 ```
+```
+docker volume create redis
+```
+```
+docker run --detach --name redis --network redis --volume redis:/data:rw library/redis:alpine
+```
